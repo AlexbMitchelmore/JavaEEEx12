@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link 
+            rel="stylesheet" type="text/css"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+                type="text/javascript"/>
+        <h:outputStylesheet library="css" name="styles.css" />
+    </h:head>
+    <h:body>
+        <h3 class="arial">Registration Page</h3>
+        <h:form>
+            <h:panelGrid columns="3" columnClasses="rightAlign, leftAlign, leftAlign err">
+                <h:outputLabel value="Salutation:" for="ddlSalutation"></h:outputLabel>
+                <h:selectOneMenu id="ddlSalutation" label="Salutation" value="">
+                    <f:selectItem itemLabel="" itemValue="" />
+                    <f:selectItem itemLabel="Mr." itemValue="ME" />
+                    <f:selectItem itemLabel="Mrs." itemValue="MES" />
+                    <f:selectItem itemLabel="Ms." itemValue="MS" />
+                    <f:selectItem itemLabel="Dr." itemValue="DR" />
+                    <f:selectItem itemLabel="Foo." itemValue="FOO" />
+                </h:selectOneMenu>
+                <h:message for="ddlSaulutation" errorClass="err" />
+                
+                <h:outputLabel value="First Name:" for="txtFirstName" />
+                    <h:inputText id="txtFirstName" label="First Name" value="" />
+                    <h:message for="txtFirstName" errorClass="err" />
+                
+                <h:outputLabel value="Last Name:" for="txtLastName" />
+                    <h:inputText id="txtLastName" label="Last Name" value="" />
+                    <h:message for="txtLastName" errorClass="err" />   
+                 
+                <h:outputLabel value="Age:" for="txtAge" />
+                    <h:inputText id="txtAge" label="Age" value="" />
+                    <h:message for="txtAge" errorClass="err" />    
+                
+                <h:outputLabel value="Email Address:" for="txtEmail" />
+                    <h:inputText id="txtEmail" label="Email" value="" />
+                    <h:message for="txtEmail" errorClass="err" />        
+                    
+            </h:panelGrid>
+        </h:form>
+        
+        
+    </h:body>
+</html>
+
